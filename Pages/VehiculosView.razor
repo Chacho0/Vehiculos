@@ -3,19 +3,20 @@
 
 <pagetitle> Registro de vehiculo</pagetitle>
 <h1>Registro de vehiculo</h1>
- <input @bind="Registro.VehiculoID">
+ <input @bind="Registro.VehiculoID"> 
  <input @bind="Registro.Marca">
  <input @bind="Registro.Modelo">
  <input @bind="Registro.Año">
+ <br>
+ <br>
  <input @bind="Registro.Color">
-
-<button class="btn @(Registro.VehiculoID) btn-primary" @onclick="Guardar">Enviar</button>
+ <button class="btn @(Registro.VehiculoID) btn-primary" @onclick="Guardar">Enviar</button>
  
 
 <table class="table">
         <thead>
             <tr>
-                <th>Vehiculo</th>
+                <th>VehiculoID</th>
                 <th>Marca</th>
                 <th>Modelo</th>
                 <th>Año</th>
@@ -38,14 +39,11 @@
     </table>
    
 @code{
+    
     public vehiculo Registro {get; set;}= new vehiculo();
 
     public List<vehiculo> vehiculos { get; set; }
     = new List<vehiculo>(){
-        
-    
-
-
 };
 void Guardar ()
 {
